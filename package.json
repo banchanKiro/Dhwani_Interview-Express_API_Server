@@ -1,6 +1,6 @@
 {
   "name": "dhwani-express-api-server",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "An express api server for the Dhwani Job Interview",
   "main": "server.js",
   "scripts": {
