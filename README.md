@@ -31,7 +31,7 @@ URL for the request and response parameters.
 
 To run the app, clone app to local and run the following commands.
 
-The application requires Node JS and PostgreSQL. Download and install node before proceeding.
+The application requires **Node JS v12.14.0** and **PostgreSQL v11.5**. Download and install the same (or compatible) version to avoid any complications.
 
 Install nodemon and knex globally using the command
 ```
@@ -42,7 +42,7 @@ Install app dependencies
 ```
 npm install
 ```
-Before proceeding to the next steps, database setup is required.
+**Before proceeding to the next steps, database setup is required.**
 - Create your user (with username and password).
 - Create database.
 - make changes in `knexfile.js` and `/database/index.js` with the above credentials (username, password and database).
@@ -63,7 +63,7 @@ npm run dev
 ```
 ### Postman
 
-- Import the `postman_collection.json` in the root directory of the app into postman (Made some alterations to the provided collection).
+- Import the `postman_collection.json` in the root directory of the app into Postman (Made some alterations to the provided collection).
 - Create environment and create entry { url: http://localhost:5000 }
 
 The app is now ready for testing.
