@@ -1,0 +1,41 @@
+{
+  "name": "dhwani-express-api-server",
+  "version": "0.1.0",
+  "description": "An express api server for the Dhwani Job Interview",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "migrate": "knex migrate:latest",
+    "seed": "knex seed:run",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/banchanKiro/Dhwani_Interview-Express_API_Server.git"
+  },
+  "keywords": [
+    "express",
+    "api-server",
+    "node",
+    "nodejs"
+  ],
+  "author": "Banchan Kiro A Sangma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/banchanKiro/Dhwani_Interview-Express_API_Server/issues"
+  },
+  "homepage": "https://github.com/banchanKiro/Dhwani_Interview-Express_API_Server#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "express": "^4.17.1",
+    "express-unless": "^0.5.0",
+    "joi": "^17.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "knex": "^0.21.2",
+    "moment": "^2.27.0",
+    "pg": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
