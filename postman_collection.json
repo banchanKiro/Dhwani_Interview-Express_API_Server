@@ -1,0 +1,586 @@
+{
+	"info": {
+		"_postman_id": "7a7b96ef-16d1-4523-9af8-5cfd146c7918",
+		"name": "census_mobile_api",
+		"description": "# Introduction\nWhat does your API do?\n\n# Overview\nThings that the developers should know about\n\n# Authentication\nWhat is the preferred way of using the API?\n\n# Error Codes\nWhat errors and status codes can a user expect?\n\n# Rate limit\nIs there a limit to the number of requests an user can send?",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Child Profile",
+			"item": [
+				{
+					"name": "Create Child Profile",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jhon Solanki\",\n    \"sex\": \"males\",\n    \"dob\": \"708566400000\",\n    \"father\": \"Peter Solanki\",\n    \"mother\": \"Julie Solanki\",\n    \"district\": \"a2065478-8b53-44e2-ac59-9559e219121f\",\n    \"photo\": \"https://staging-dhwani.s3.ap-south-1.amazonaws.com/82ac44b1c5d7ef91a9e912abca5fc3f5.jpg\"\n}",
+							"options": {
+								"raw": {}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/child",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"child"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Child Profile List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/child",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"child"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "father",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "mother",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "district",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "district_id",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "Bihar",
+									"disabled": true
+								},
+								{
+									"key": "state_id",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "State",
+			"item": [
+				{
+					"name": "Get State List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/state",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"state"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Uttar Pradesh",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "56958f75-4868-4a5c-89b9-212b6d703e3e",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create State",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Delhi\"\r\n}",
+							"options": {
+								"formdata": {},
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/state",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"state"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "District",
+			"item": [
+				{
+					"name": "Get District List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/district",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"district"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "state",
+									"value": "e31576d0-778c-46b3-9f5e-333fb60bfa54",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create District",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Some District\",\r\n    \"state\": \"e31576d0-778c-46b3-9f5e-333fb60bfa54\"\r\n}",
+							"options": {
+								"formdata": {},
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/district",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"district"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "User/login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "101e844c-deba-4cc6-92f9-2efec6f15e9c",
+								"exec": [
+									"postman.setEnvironmentVariable('token', postman.getResponseHeader('authorization'));"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin\",\r\n    \"password\": \"admin.123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/user/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Logout",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQ3IiwidW5pcXVlX3VzZXJfaWQiOiIxMTg4IiwibmFtZSI6IkJhcm1lciBTb3V0aCBDb29yZGluYXRvciIsInVzZXJuYW1lIjoiMjA0MCIsIm1vYmlsZSI6Ijk5OTk5OTk5OTkiLCJsZXZlbF9pZCI6IjUiLCJwYXNzd29yZF9yZXNldF90b2tlbiI6bnVsbCwiZW1haWwiOiJhYmNuZ0BnbWFpbC5jb20iLCJhdXRoX2tleSI6ImQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlIiwic3RhdHVzIjoiMSIsImNyZWF0ZWRfYXQiOiIwMDAwLTAwLTAwIDAwOjAwOjAwIiwidXBkYXRlZF9hdCI6IjIwMTktMTEtMDYgMDc6MTg6MDQiLCJjaGFuZ2VkX3Bhc3N3b3JkX29uY2UiOm51bGwsInVzZXJfZXJyb3JfZnJlcXVlbmN5XzEiOm51bGwsInVzZXJfZXJyb3JfZnJlcXVlbmN5XzIiOiIxOCIsInVzZXJfbGV2ZWwiOiJDbHVzdGVyIFN1cGVydmlzb3IiLCJsb2dpbl9pZCI6M30.ak3OSYopsW211SvJnzH4nNLvcj9Z4B16fR329fZbHeA"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/user/logout",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						},
+						"description": "This is not required. In order to log out user, the jwt just needs to be removed. jwt expires in 24 hours"
+					},
+					"response": []
+				},
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"testUser\",\r\n    \"name\": \"Test User\",\r\n    \"organization\": \"Test organization\",\r\n    \"designation\": \"Full Stack Developer\",\r\n    \"password\": \"test.123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}/api/user",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "organization",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "designation",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "File Upload",
+			"item": [
+				{
+					"name": "S3 Upload",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjQ3IiwidW5pcXVlX3VzZXJfaWQiOiIxMTg4IiwibmFtZSI6IkJhcm1lciBTb3V0aCBDb29yZGluYXRvciIsInVzZXJuYW1lIjoiMjA0MCIsIm1vYmlsZSI6Ijk5OTk5OTk5OTkiLCJsZXZlbF9pZCI6IjUiLCJwYXNzd29yZF9yZXNldF90b2tlbiI6bnVsbCwiZW1haWwiOiJhYmNuZ0BnbWFpbC5jb20iLCJhdXRoX2tleSI6ImQ0MWQ4Y2Q5OGYwMGIyMDRlOTgwMDk5OGVjZjg0MjdlIiwic3RhdHVzIjoiMSIsImNyZWF0ZWRfYXQiOiIwMDAwLTAwLTAwIDAwOjAwOjAwIiwidXBkYXRlZF9hdCI6IjIwMTktMTEtMDYgMDc6MTg6MDQiLCJjaGFuZ2VkX3Bhc3N3b3JkX29uY2UiOm51bGwsInVzZXJfZXJyb3JfZnJlcXVlbmN5XzEiOm51bGwsInVzZXJfZXJyb3JfZnJlcXVlbmN5XzIiOiIxOCIsInVzZXJfbGV2ZWwiOiJDbHVzdGVyIFN1cGVydmlzb3IiLCJsb2dpbl9pZCI6M30.ak3OSYopsW211SvJnzH4nNLvcj9Z4B16fR329fZbHeA"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mimeType",
+									"value": "image/jpg",
+									"type": "text"
+								},
+								{
+									"key": "imageName",
+									"value": "abc.jpg",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://hrtaskapi.dhwaniris.in/index.php/api/upload-image/s3-upload",
+							"protocol": "https",
+							"host": [
+								"hrtaskapi",
+								"dhwaniris",
+								"in"
+							],
+							"path": [
+								"index.php",
+								"api",
+								"upload-image",
+								"s3-upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/C:/Users/bhagyesh/Desktop/earth.png"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://staging-dhwani.s3.ap-south-1.amazonaws.com/82ac44b1c5d7ef91a9e912abca5fc3f5.jpg?x-amz-acl=public-read&x-amz-meta-name=abc.jpg&x-amz-meta-alias=82ac44b1c5d7ef91a9e912abca5fc3f5.jpg&x-amz-meta-type=image%2Fjpg&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJGNIQMDDQLEKQTJQ%2F20191108%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20191108T104108Z&X-Amz-SignedHeaders=host&X-Amz-Expires=1200&X-Amz-Signature=d17abae1adc7eb115be342a8143747d48830cdeebae5a781a819dd9ceb447dfd",
+							"protocol": "https",
+							"host": [
+								"staging-dhwani",
+								"s3",
+								"ap-south-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"82ac44b1c5d7ef91a9e912abca5fc3f5.jpg"
+							],
+							"query": [
+								{
+									"key": "x-amz-acl",
+									"value": "public-read"
+								},
+								{
+									"key": "x-amz-meta-name",
+									"value": "abc.jpg"
+								},
+								{
+									"key": "x-amz-meta-alias",
+									"value": "82ac44b1c5d7ef91a9e912abca5fc3f5.jpg"
+								},
+								{
+									"key": "x-amz-meta-type",
+									"value": "image%2Fjpg"
+								},
+								{
+									"key": "X-Amz-Content-Sha256",
+									"value": "UNSIGNED-PAYLOAD"
+								},
+								{
+									"key": "X-Amz-Algorithm",
+									"value": "AWS4-HMAC-SHA256"
+								},
+								{
+									"key": "X-Amz-Credential",
+									"value": "AKIAJGNIQMDDQLEKQTJQ%2F20191108%2Fap-south-1%2Fs3%2Faws4_request"
+								},
+								{
+									"key": "X-Amz-Date",
+									"value": "20191108T104108Z"
+								},
+								{
+									"key": "X-Amz-SignedHeaders",
+									"value": "host"
+								},
+								{
+									"key": "X-Amz-Expires",
+									"value": "1200"
+								},
+								{
+									"key": "X-Amz-Signature",
+									"value": "d17abae1adc7eb115be342a8143747d48830cdeebae5a781a819dd9ceb447dfd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
