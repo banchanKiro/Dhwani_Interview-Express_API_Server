@@ -30,7 +30,7 @@
     "express": "^4.17.1",
     "express-unless": "^0.5.0",
     "joi": "^17.1.1",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "knex": "^0.21.2",
     "moment": "^2.27.0",
     "pg": "^8.3.0"
